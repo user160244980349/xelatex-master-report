@@ -2,10 +2,9 @@
 /.vscode
 /.idea
 !/figures/*.pdf
-!main.pdf
 *.log
 *.aux
 *.toc
+*.out
 *.xml
 *.synctex.gz
-*.pdf
