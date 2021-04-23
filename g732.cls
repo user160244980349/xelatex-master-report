@@ -133,6 +133,19 @@
 \setlength{\LTpre}{\baselineskip}
 \setlength{\LTpost}{.75\baselineskip}
 
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{M}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{H}[1]{>{\bfseries\centering\arraybackslash}M{#1}}
+
+\newenvironment{ltwrap}[3]{
+    \begingroup
+    #3
+    \setstretch{1}
+    \setlength{\tabcolsep}{#1}
+    \newcommand\x{\textwidth-2\tabcolsep}
+    \renewcommand{\arraystretch}{#2}
+}{\endgroup}
+
 %
 % Configuring titles
 %

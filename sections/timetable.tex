@@ -13,7 +13,7 @@
         выпускной квалификационной работы
     }
 
-    \vspace{1cm}
+    \vspace{4mm}
 
     \hfill Утверждаю
 
@@ -23,7 +23,7 @@
 
     \hfill <<\underline{\hspace{1cm}}>>\underline{\hspace{5cm}}~\the\year~г.
 
-    \vspace{1cm}
+    \vspace{4mm}
 
     \parbox[t]{\textwidth}{
         Студент Кузнецов М.Д. \hfill Группа 5374
@@ -31,35 +31,43 @@
         Тема работы: Методика анализа политик безопасности на основе онтологического представления предметной области.
     }
 
-    \begin{table*}[h!]
-        \renewcommand{\arraystretch}{1.25}
-        \renewcommand{\tabularxcolumn}[1]{m{#1}}
-        \begin{tabularx}{\textwidth}
-            { |>{\centering\arraybackslash}m{.05\textwidth}
-              |>{\arraybackslash}X
-              |>{\centering\arraybackslash}m{.14\textwidth} |}
-            \hline
-            № п\char`\\п & \centering Наименование работ          & Срок выполнения \\\hline
-            1            & Обзор литературы по теме работы        & 01.02 -- 28.02  \\\hline
-            2            & Анализ предметной области              & 01.03 -- 31.03  \\\hline
-            3            & Проектирование инструментария разметки & 01.04 -- 15.04  \\\hline
-            4            & Реализация инструментария разметки     & 15.04 -- 30.04  \\\hline
-            5            & Оформление пояснительной записки       & 01.05 -- 07.05  \\\hline
-            6            & Оформление иллюстративного материала   & 07.05 -- 15.05  \\\hline
-        \end{tabularx}
-    \end{table*}
+
+    \begin{ltwrap}{2mm}{1.5}{\normalsize}
+    \begin{longtable*}[H]{|C{.07\x}|M{.78\x}|C{.15\x}|}
+        \hline
+        \multicolumn{1}{|C{.07\x}|}{№ п\char`\\п}
+        & \multicolumn{1}{C{.78\x}|}{Наименование работ} 
+        & \multicolumn{1}{C{.15\x}|}{Срок выполнения}\\\hline
+        \endfirsthead
+        \endhead
+        \endfoot
+        \endlastfoot
+        1 & Обзор литературы по теме работы        & 01.02 -- 28.02  \\\hline
+        2 & Анализ предметной области              & 01.03 -- 31.03  \\\hline
+        3 & Проектирование инструментария разметки & 01.04 -- 15.04  \\\hline
+        4 & Реализация инструментария разметки     & 15.04 -- 30.04  \\\hline
+        5 & Оформление пояснительной записки       & 01.05 -- 07.05  \\\hline
+        6 & Оформление иллюстративного материала   & 07.05 -- 15.05  \\\hline
+    \end{longtable*}
+    \end{ltwrap}
 
     \vfill
 
     % \includegraphics{сигна2.png}
     Студент\hfill 
     \stackunder[3pt]{\underline{\hspace{4cm}}}{\scriptsize\textit{подпись}} \makebox[5cm]{Кузнецов М.Д.}
-    
-    \vspace{.5cm}
 
+    \vspace{4mm}
+    
     Руководитель\hfill
     \stackunder[5pt]{\makebox[3cm]{к.т.н., доцент}}{\scriptsize\textit{(Уч. степень, уч. звание)}}\hfill
     \stackunder[3pt]{\underline{\hspace{4cm}}}{\scriptsize\textit{подпись}} \makebox[5cm]{Новикова Е.С.}
+
+    \vspace{4mm}
+
+    Консультант\hfill
+    \stackunder[5pt]{\makebox[3cm]{к.э.н., доцент}}{\scriptsize\textit{(Уч. степень, уч. звание)}}\hfill
+    \stackunder[3pt]{\underline{\hspace{4cm}}}{\scriptsize\textit{подпись}} \makebox[5cm]{Жукова Т.Н.}
 
 \end{titlepage}
 
