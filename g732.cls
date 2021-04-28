@@ -106,6 +106,7 @@
 
 % Setting lines stretch
 \setstretch{1.5}
+\sloppy
 
 % Paragraphs spaces
 \setlength{\parskip}{0mm}

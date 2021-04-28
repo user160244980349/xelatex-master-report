@@ -4,91 +4,12 @@
 \begin{document}
 
 \newpage
-
-\section*{Приложение А}
 \phantomsection
+\label{sec:appendix1}
+\section*{Приложение А}
 \addcontentsline{toc}{section}{Приложение А}
 
-\phantomsection
-\label{sec:appendix11}
-\subsection*{А.1 Алгоритм}
-
-\begin{lstlisting}
-coeff = getSumPdWeight(PD_class)
-if coeff < 1:
-    coeff = 10 + coeff
-RiskScoreBase = max_criticality * (1 + lg(coeff))
-\end{lstlisting}
-
-
-\phantomsection
-\label{sec:appendix12}
-\subsection*{А.2 Алгоритм}
-
-\begin{lstlisting}
-if (LB_weight + P_weight) < 1:
-    coeff = 1 
-else:
-    coeff = 1 + lg(LB_weight + P_weight)
-FP_RiskScore = RiskScoreBase * coeff
-if FP_RiskScore > 10:
-    FP_RiskScore = RiskScoreBase + (10 - RiskScoreBase) * \ 
-        (coeff / (1 + lg(6))
-Return FP_RiskScore
-\end{lstlisting}
-
-\phantomsection
-\label{sec:appendix13}
-\subsection*{А.3 Алгоритм}
-
-\begin{lstlisting}
-UsageScenarioRiskScore = RiskScoreBase * coeff,
-
-where UsageScenarioRiskScore – privacy risk score for the data usage scenario;
-       RiskScoreBase – the base of privacy risk score;
-       coeff – coefficient that increase or decrease the risk depending on the aspects specified in the privacy policy.
-
-The algorithm’s pseudocode is provided below.
-
-rC = getRoots(C) //C is the set of ontology classes
-for rci from rC:  //rC is the set of root ontology classes corresponding 
-                                                  to the usage scenarios
-    coeff = 0    //coefficient that depends on the aspects specified 
-                                                  in the privacy policy
-    rcc = getChilds(rci)       //get childs of the selected root class
-    for rcck from rcc:
-        scc = getSubclasses(rcck)  //get subclasses of the selected 
-                                                                  class
-        for sccr from scc:
-            catr = getCategory(sccr)  //determine category of the 
-                                                               subclass
-            add catr to cat  //forming the set of categories for the 
-                                                               subclass
-        maxCritCat = getMaxCritCat(cat)  //define category with max 
-                                                            criticality
-        classWeight = getClassWeight(maxCritCat)  //define weight of 
-                                       the category with max criticality
-        if rcck is PersonalData:
-            pd_coeff = getSumPdWeight(cat)  //calculate sum of weights 
-                                            for personal data subclasses
-            if pd_coeff < 1: 
-                pd_coeff = 10 + pd_coeff
-            RiskScoreBase = maxCritCat(1 + lg(pd_coeff))  //calculate 
-                                         the base of privacy risk score
-        else:
-            coeff += classWeight  //calculate sum of max weights for 
-                         other categories subclasses (not personal data)
-        if coeff < 1: 
-            risk_coeff = 1 
-        else:
-            risk_coeff = 1 + lg(coeff) 
-    UsageScenarioRiskScore = RiskScoreBase * risk_coeff
-    if UsageScenarioRiskScore > 10:       //scaling to 0 to 10 scale
-        UsageScenarioRiskScore = RiskScoreBase + (10 - RiskScoreBase) * risk_coeff / (1 + lg(coeff)) 
-add UsageScenarioRiskScore to RiskScores  //set of privacy risk scores 
-                                                    for usage scenarios
-return RiskScores
-\end{lstlisting}
+Архив с исходными кодами вэб-скрейпера.
 
 
 \newpage
@@ -97,7 +18,8 @@ return RiskScores
 \section*{Приложение Б}
 \addcontentsline{toc}{section}{Приложение Б}
 
-Архив с исходными кодами вэб-скрейпера.
+Архив с исходными кодами инструмента для разметки дата сета.
+
 
 
 \newpage
@@ -105,16 +27,6 @@ return RiskScores
 \label{sec:appendix3}
 \section*{Приложение В}
 \addcontentsline{toc}{section}{Приложение В}
-
-Архив с исходными кодами инструмента для разметки датасета.
-
-
-
-\newpage
-\phantomsection
-\label{sec:appendix4}
-\section*{Приложение Г}
-\addcontentsline{toc}{section}{Приложение Г}
 
 Электронная версия пояснительной записки.
 
