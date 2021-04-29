@@ -8,21 +8,18 @@
 \section*{Реферат}
 Поясн. зап. \total{page} стр., \total{figure}  рис., \total{table} табл., \total{bibcnt} ист., 3 прил.
 
-{   
-    \jj\parindent=12.5mm
-    \par
-    \MakeUppercase{автоматизированная обработка естественного языка, политики безопасности, пользовательские соглашения}
-    \par
-}
+\begin{jje}
+    \MakeUppercase{автоматизированная обработка естественного языка, политики безопасности, пользовательские соглашения, онтологическое представление}
+\end{jje}
 
 Объектом  исследования являются способы эффективной автоматизированной формализации политик безопасности.
 
-Цель работы -- разработать эффективный план автоматизированных способов формализации политик безопасности на основе онтологического представления, разработать инструменты создания обучающей выборки для автоматизированной формализации политик безопасности, что является промежуточным шагом для автоматизированной оценки угроз персональным данным.
+Цель работы -- разработать эффективный план и автоматизированные способы формализации политик безопасности на основе онтологического представления предметной области, разработать инструменты создания обучающей выборки для автоматизированной формализации политик безопасности, что является промежуточным шагом для автоматизированной оценки угроз персональным данным.
 
-Политики конфиденциальности предоставляют пользователям информацию о том, как их личные данные собираются, обрабатываются и передаются третьим лицам. В большинстве случаев они написаны нечетко и непрозрачно, поэтому важно сделать политику конфиденциальности ясной и прозрачной для конечного пользователя. Было исследовано применение методов LSA, LDA, POS для обнаружения семантических особенностей, представленных в политиках конфиденциальности. Также тестируется POS подход с пулами синонимов. Однако, такие строгие способы обработки текста не очень точны. Использование методов глубокого обучения с онтологическим представлением предметной области делает возможной точную формализацию политик конфиденциальность. Для этого были созданы поисковый робот и инструмент аннотации. С помощью поискового бота был получен набор данных из 592 политик конфиденциальности. Программный комплекс -- шаг к автоматизированной оценке угроз персональным данным.
+Политики конфиденциальности предоставляют пользователям информацию о том, как их личные данные собираются, обрабатываются и передаются третьим лицам. В большинстве случаев они написаны нечетко и непрозрачно, поэтому важно сделать политику конфиденциальности ясной и прозрачной для конечного пользователя. Было исследовано применение методов LSA и LDA для обнаружения семантических особенностей, представленных в политиках конфиденциальности. Также тестируется POS подход с пулами синонимов. Однако, такие строгие методы обработки текста не очень точны. Использование методов глубокого обучения с онтологическим представлением предметной области делает возможной точную формализацию политик конфиденциальности. Для этого были созданы веб-скрейпер и инструмент аннотирования. С помощью веб-скрейпер был получен набор данных из 592 политик конфиденциальности. Программный комплекс -- шаг к автоматизированной оценке угроз персональным данным.
 
 \newpage
 \section*{Abstract}
-Privacy policies provide end users information about how they personal data collected, processed and shared with third parties. However, in major cases they are written in unclear and not transparent manner. So, it is important to make privacy  policies clear and transparent to end user. In this work, application of the LSA, LDA, POS techniques to detect semantic features presented in the privacy policy are investigated. Also POS with synonyms pools are tested. However, more strict ways of text processing are not very accurate. Using deep learning techniques with ontology representation of subject field making accurate privacy policy formalization possible. For that the crawler and annotation tool were created. Finally, the privacy policies dataset consisting of 592 was obtained with the crawler. Also the annotation methodic was proposed with corresponging annotation tool. Program package -- step to automated privacy policies threats detections and risk analysis.
+Privacy policies provide end users information about how they personal data are collected, processed and shared with third parties. However, in major cases they are written in unclear and not transparent manner. So, it is important to make privacy  policies clear and transparent to end user. In this work, application of the LSA and LDA techniques to detect semantic features presented in the privacy policy are investigated. Also POS with synonyms pools is tested. However, more strict ways of text processing are not very accurate. Using deep learning techniques with ontology representation of subject domain making accurate privacy policy formalization possible. For that the crawler and annotation tool were created. Finally, the privacy policies dataset consisting of 592 was obtained with the crawler. Also the annotation methodic was proposed with corresponding annotation tool. Program package -- step to automated privacy policies threats detections and risk analysis.
 
 \end{document}

@@ -77,11 +77,14 @@
   linktoc=page
 }
 
-\def\startlines{%
-\begingroup
-    \jj\parindent=12.5mm
+% Restrict hyphenation
+\newcommand{\jj}{
+    \tolerance=1
+    \emergencystretch=\maxdimen
+    \hyphenpenalty=10000
 }
-\def\endlines{\endgroup}
+
+\newenvironment{jje}{\jj\par}{\par}
 
 % Redefine default commands
 \AtBeginDocument{
@@ -105,8 +108,10 @@
 }
 
 % Setting lines stretch
+\tolerance=10000
+\hbadness=10000
+\maxdepth=0pt
 \setstretch{1.5}
-\sloppy
 
 % Paragraphs spaces
 \setlength{\parskip}{0mm}
@@ -150,14 +155,6 @@
 %
 % Configuring titles
 %
-
-% Word style justifications
-\newcommand{\jj}{
-    \tolerance=1
-    \emergencystretch=\maxdimen
-    \hyphenpenalty=10000
-    \hbadness=10000
-}
 
 % Configuring spacing
 \titlespacing{\section}{0mm}{0mm}{0mm}
