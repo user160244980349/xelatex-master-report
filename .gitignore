@@ -1,9 +1,9 @@
 # LaTeX produced files
 /.vscode
 /.idea
+*.pdf
 !/figures/*.pdf
 !/main.pdf
-*.pdf
 *.log
 *.aux
 *.toc
