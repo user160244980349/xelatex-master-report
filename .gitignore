@@ -2,6 +2,8 @@
 /.vscode
 /.idea
 !/figures/*.pdf
+!/main.pdf
+*.pdf
 *.log
 *.aux
 *.toc
