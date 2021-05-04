@@ -11,6 +11,7 @@
 
 % Playing with fonts
 \RequirePackage{fontspec}
+\RequirePackage[math-style=upright]{unicode-math}
 
 \defaultfontfeatures{Ligatures=TeX}
 
@@ -23,6 +24,8 @@
 \setromanfont{Times New Roman} 
 \setsansfont{Arial} 
 \setmonofont{Courier New} 
+% \setmathfont{XITS Math}
+\setmathfont{TeX Gyre Termes Math}
 
 % Playing with languages
 \RequirePackage{polyglossia}
@@ -124,7 +127,7 @@
 
 % Configuring floats
 \setlength{\intextsep}{\baselineskip}
-\setlength{\floatsep}{\baselineskip}
+\setlength{\floatsep}{0mm}
 \setlength{\textfloatsep}{\baselineskip}
 
 % Math spacing
@@ -139,16 +142,19 @@
 \setlength{\LTpre}{\baselineskip}
 \setlength{\LTpost}{.75\baselineskip}
 
-\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-\newcolumntype{M}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{Z}[1]{>{\setlength{\baselineskip}{.75\baselineskip}\arraybackslash}m{#1}}
+\newcolumntype{Q}[1]{>{\setlength{\baselineskip}{.75\baselineskip}\arraybackslash}p{#1}}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}Z{#1}}
+\newcolumntype{M}[1]{>{\arraybackslash}Z{#1}}
+\newcolumntype{T}[1]{>{\arraybackslash}Q{#1}}
 \newcolumntype{H}[1]{>{\bfseries\centering\arraybackslash}M{#1}}
 
 \newenvironment{ltwrap}[3]{
     \begingroup
     #3
-    \setstretch{1}
     \setlength{\tabcolsep}{#1}
-    \newcommand\x{\textwidth-2\tabcolsep}
+    \newcommand{\x}{\textwidth-2\tabcolsep}
     \renewcommand{\arraystretch}{#2}
 }{\endgroup}
 
