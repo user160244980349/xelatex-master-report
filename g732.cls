@@ -72,6 +72,11 @@
     font={stretch=1},
     labelsep=endash,
 ]{caption}
+\RequirePackage[
+    semicolon,
+    sort&compress,
+    numbers
+]{natbib}
 
 \urlstyle{rm}
 \hypersetup{
@@ -164,8 +169,8 @@
 
 % Configuring spacing
 \titlespacing{\section}{0mm}{0mm}{0mm}
-\titlespacing{\subsection}{0mm}{0mm}{0mm}
-\titlespacing{\subsubsection}{0mm}{0mm}{0mm}
+\titlespacing{\subsection}{0mm}{3mm}{0mm}
+\titlespacing{\subsubsection}{0mm}{3mm}{0mm}
 
 % Configuring formats
 \titleformat{name=\section}[block]
@@ -184,7 +189,7 @@
     {0mm}{\filright}
 
 \titleformat{name=\subsubsection}[block]
-    {\hspace{\parindent}}
+    {\hspace{\parindent}\bfseries}
     {\thesubsubsection~}
     {0mm}{\filright}
 
@@ -232,10 +237,12 @@
 \renewlist{enumerate}{enumerate}{3}
 
 % Bibliography enumeration
-\newlist{biblenum}{enumerate}{3}
+
+\newlist{biblenum}{enumerate}{1}
 \setlist[biblenum]{
     align=left,
-    label=\arabic*~,
+    % label=\arabic*.~,
+    label=,
     topsep=0mm,
     parsep=0mm,
     partopsep=0mm,
@@ -247,8 +254,7 @@
     listparindent=\parindent
 }
 \setlist[biblenum,1]{}
-\setlist[biblenum,2]{}
-\setlist[biblenum,3]{}
+\renewcommand{\bibnumfmt}[1]{#1.~}
 
 % Terms and abbreviations
 \newlist{termenum}{enumerate}{3}
