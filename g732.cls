@@ -175,7 +175,7 @@
 % Configuring formats
 \titleformat{name=\section}[block]
     {\bfseries\filcenter}
-    {\thesection~}
+    {\thesection.~}
     {0mm}{}
 
 \titleformat{name=\section,numberless}[block]
@@ -185,12 +185,12 @@
 
 \titleformat{name=\subsection}[block]
     {\hspace{\parindent}\bfseries}
-    {\thesubsection~}
+    {\thesubsection.~}
     {0mm}{\filright}
 
 \titleformat{name=\subsubsection}[block]
     {\hspace{\parindent}\bfseries}
-    {\thesubsubsection~}
+    {\thesubsubsection.~}
     {0mm}{\filright}
 
 % 
@@ -202,17 +202,17 @@
 
 % Styles
 \titlecontents{section}[0ex]{\filright}
-    {\thecontentslabel~}
+    {\thecontentslabel.~}
     {\MakeUppercase}
     {\titlerule*[1ex]{.}\thecontentspage}
 
 \titlecontents{subsection}[2ex]{\filright}
-    {\thecontentslabel~}
+    {\thecontentslabel.~}
     {}
     {\titlerule*[1ex]{.}\thecontentspage}
     
 \titlecontents{subsubsection}[4ex]{\filright}
-    {\thecontentslabel~\raggedright}
+    {\thecontentslabel.~\raggedright}
     {}
     {\titlerule*[1ex]{.}\thecontentspage}
 
